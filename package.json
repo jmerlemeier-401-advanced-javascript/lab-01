@@ -1,0 +1,31 @@
+{
+  "name": "lab-01",
+  "version": "1.0.0",
+  "description": "Deployment workshop with validator test",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint './lib/**/*.js' --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmerlemeier-401-advanced-javascript/lab-01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmerlemeier-401-advanced-javascript/lab-01/issues"
+  },
+  "homepage": "https://github.com/jmerlemeier-401-advanced-javascript/lab-01#readme",
+  "dependencies": {
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.3"
+  }
+}

@@ -39,13 +39,14 @@ describe('validator module performs basic validation of', () => {
 
 describe('validator module performs complex validations', () => {
 
-  // it('validates the presence of required object properties at any level', () => {
-  //   // i.e. does person.hair.color exist and have a good value, not just person.hair
-  //   //make person.hair.color
-  //   //make person.hair.color have a good value?
-  //   //Does good value mean truthy?
-  //   expect(true).toBeFalsy();
-  // });
+  it('validates the presence of required object properties at any level', () => {
+    // i.e. does person.hair.color exist and have a good value, not just person.hair
+    let person = {name: 'James', legs: 2, hair: {color: 'brown', length: 'short'}};
+    //is animal an object
+    expect(validator.isObject(obj)).toBeTruthy();
+    //does person.hair.color exist?
+    expect(validator.requiredProperty(object)).toBeTruthy();
+  });
 
   // it('validates the proper types of object properties', () => {
   //   // i.e. person.name must be a string, etc.

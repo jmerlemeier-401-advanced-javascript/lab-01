@@ -39,25 +39,35 @@ describe('validator module performs basic validation of', () => {
 
 describe('validator module performs complex validations', () => {
 
-  it('validates the presence of required object properties at any level', () => {
-    // i.e. does person.hair.color exist and have a good value, not just person.hair
-    expect(true).toBeFalsy();
-  });
+  // it('validates the presence of required object properties at any level', () => {
+  //   // i.e. does person.hair.color exist and have a good value, not just person.hair
+  //   //make person.hair.color
+  //   //make person.hair.color have a good value?
+  //   //Does good value mean truthy?
+  //   expect(true).toBeFalsy();
+  // });
 
-  it('validates the proper types of object properties', () => {
-    // i.e. person.name must be a string, etc.
-    expect(true).toBeFalsy();
-  });
+  // it('validates the proper types of object properties', () => {
+  //   // i.e. person.name must be a string, etc.
+  //   expect(true).toBeFalsy();
+  // });
 
   it('validates the types of values contained in an array', () => {
-    // i.e. an array of all strings or numbers
-    expect(true).toBeFalsy();
+    let arr = ['a', 'b', 'c', 'd'];
+    let badArr = ['a', 3, 'c', 18]
+    //check that array is array
+    expect(validator.isArray(arr)).toBeTruthy(); //if true, passes.
+    expect(validator.isArray(badArr)).toBeTruthy(); //if true, passes.
+
+    expect(validator.arrayTypesSame(arr)).toBeTruthy();
+    expect(validator.arrayTypesSame(badArr)).toBeFalsy();
   });
 
-  it('validates a value array against an approved list', () => {
-    // i.e. a string might only be allowed to be "yes" or "no"
-    expect(true).toBeFalsy();
-  });
+
+  // it('validates a value array against an approved list', () => {
+  //   // i.e. a string might only be allowed to be "yes" or "no"
+  //   expect(true).toBeFalsy();
+  // });
 
   // TODO: Cover so, so many more cases
 

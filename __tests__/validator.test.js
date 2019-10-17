@@ -1,14 +1,15 @@
 'use strict';
 
-const validator = require('../lib/validator.js');
+const Validator = require('../lib/validator.js');
 
-describe('validator module performs basic validation of', () => {
+describe('validator module performs basic validation of strings, numbers, arrays, objects, booleans, functions', () => {
 
-  // TODO: Make this series of tests less repetitive ... DRY it out
+  const validator = new Validator();
 
-  it('strings', () => {
+  it('isStrings should return true when passed a string', () => {
     let str = 'yes';
     expect(validator.isString(str)).toBeTruthy();
+    // could have written: expect(validator.isString(str)).toEqual(true);
   });
 
   it('numbers', () => {

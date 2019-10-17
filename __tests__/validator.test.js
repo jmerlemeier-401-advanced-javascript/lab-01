@@ -1,8 +1,10 @@
 'use strict';
 
-const validator = require('../lib/validator.js');
+const Validator = require('../lib/validator.js');
 
 describe('validator module performs basic validation of strings, numbers, arrays, objects, booleans, functions', () => {
+
+  const validator = new Validator();
 
   it('isStrings should return true when passed a string', () => {
     let str = 'yes';
